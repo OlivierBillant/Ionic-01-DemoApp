@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Demo Ionic </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h1>Would you like to know more?</h1>
+  <p>Paragraphe</p>
+  <div>Div etc etc</div>
+  <app-title></app-title>
+  <p>{{ hello }}</p>
+  <!-- -->
+  <!-- Event Binding -->
+  <button (click)="clickMe()">Cliquez ici</button>
+  <!-- Property Binding -->
+  <div [hidden]="isHidden">Suis-je caché</div>
+  <!-- Two way Binding -->
+<Label>Entrez votre nom</Label>
+<input type="text" [(ngModel)]="name">
+<p>Bonjour {{ name }}</p>
 </ion-content>

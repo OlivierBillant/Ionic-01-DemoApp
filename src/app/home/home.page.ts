@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  hello: string = 'Hello World !!!';
+  isHidden: boolean = true;
+  name: string = "Anonyme";
 
   constructor() {}
 
+  clickMe(){
+    this.hello = "Phrase hello modifiée par le binding";
+    this.isHidden = !this.isHidden;
+  }
 }
