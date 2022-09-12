@@ -9,6 +9,8 @@ export class HomePage {
   hello: string = 'Hello World !!!';
   isHidden: boolean = true;
   name: string = "Anonyme";
+  fruits: string[] = ["pomme", "banane", "kiwi", "pomme", "fraise"];
+  colorText: string = "blue";
 
   constructor() {}
 

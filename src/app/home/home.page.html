@@ -6,7 +6,6 @@
 
 <ion-content [fullscreen]="true">
   <h1>Would you like to know more?</h1>
-  <p>Paragraphe</p>
   <div>Div etc etc</div>
   <app-title></app-title>
   <p>{{ hello }}</p>
@@ -16,7 +15,19 @@
   <!-- Property Binding -->
   <div [hidden]="isHidden">Suis-je caché</div>
   <!-- Two way Binding -->
-<Label>Entrez votre nom</Label>
-<input type="text" [(ngModel)]="name">
-<p>Bonjour {{ name }}</p>
+  <label>Entrez votre nom</label>
+  <input type="text" [(ngModel)]="name" />
+  <p>Bonjour {{ name }}</p>
+  <!-- ngClass : style conditionnel -->
+  <p [ngClass]="{'green': isHidden, 'orange': !isHidden}">Paragraphe</p>
+  <!--Affichage de tableau -->
+  <!--Directive structurelle -->
+  <div>
+    <ul>
+      <li *ngFor="let fruit of fruits" [ngStyle]="{'color' : colorText}">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+
 </ion-content>
